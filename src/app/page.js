@@ -8,7 +8,6 @@ import About from '@/components/about';
 import Works from '@/components/works';
 import Skills from '@/components/skills';
 import { useRef } from 'react';
-import Head from 'next/head';
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -22,9 +21,6 @@ export default function Home() {
   };
   return (
     <main className={`${styles.wrapper}  ${styles.container}`}>
-      <Head>
-        <title>Esra Akbulat</title>
-      </Head>
       <Navbar
         scrollToAbout={() => scrollToRef(aboutRef)}
         scrollToWorks={() => scrollToRef(worksRef)}
