@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 90vh;
+  padding: 0px 100px;
+}
+.blob {
+  margin-top: -500px;
+  margin-left: 50vw;
+}
+.title {
+  z-index: 2;
+  margin-top: 3vw;
+}
+.span {
+  color: #f0c808;
+}
+.footer {
+  display: flex;
+  width: 93%;
+  position: fixed;
+  bottom: 3vw;
+}
+.next {
+  margin-left: auto;
+  cursor: pointer;
+}
+.svg {
+  width: 500px;
+  display: flex;
+}
+.mySquare {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+    width: 100vw;
+    height: 80vh;
+  }
+  .blob {
+    margin: -290px 0 0 20vw;
+    height: 400px;
+    width: 90vw;
+    max-width: 500px;
+  }
+  .title {
+    margin-top: 100px;
+  }
+}

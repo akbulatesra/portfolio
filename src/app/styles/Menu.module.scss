@@ -1,0 +1,24 @@
+.list {
+  list-style: none;
+  float: right;
+  text-align: right;
+  margin-right: 2vw;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  margin-top: -3vh;
+  li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+}
+.show {
+  opacity: 1;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti ekleme */
+}
+.visible {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti ekleme */
+}

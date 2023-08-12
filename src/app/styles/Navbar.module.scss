@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0px 20px;
+}
+.dot {
+  display: flex;
+  gap: 10px;
+}
+.contact {
+  cursor: pointer;
+  display: flex;
+  text-transform: capitalize;
+  align-items: center;
+  gap: 10px;
+  img {
+    transform: rotate(45deg);
+  }
+}
+.wrapperRight {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-left: auto;
+  margin-right: 2vw;
+}
+.menu {
+  cursor: pointer;
+}
+.navbarInside {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}

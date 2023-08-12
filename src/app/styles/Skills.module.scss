@@ -1,0 +1,105 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 93%;
+  position: fixed;
+  bottom: 3vw;
+}
+.next,
+.previous {
+  cursor: pointer;
+}
+.title {
+  margin-top: 3vw;
+}
+.textWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15vw;
+  transform-origin: center;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.circle {
+  width: inherit;
+  transform-origin: center;
+}
+.circle:hover {
+  animation: hoverAnimation 2s reverse;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, auto));
+  margin: 50px auto;
+}
+
+.textWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(241, 241, 234, 0.6);
+  box-shadow: 0px 4px 9px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  width: 25vw;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  height: 10vw;
+  pointer-events: auto;
+}
+.textWrapper:hover {
+  transform: scale(1.05);
+}
+.wrapper {
+  height: 100vh;
+  padding: 0px 100px;
+  // pointer-events: none;
+}
+.valueWrapper {
+  margin: 20px 0 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti ekleme */
+}
+.visible {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efekti ekleme */
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .textWrapper {
+    width: 60vw;
+    height: 60px;
+  }
+  .valueWrapper {
+    margin: 20px;
+  }
+}

@@ -1,0 +1,116 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 93%;
+  position: fixed;
+  bottom: 3vw;
+}
+.next,
+.previous {
+  cursor: pointer;
+}
+.img {
+  width: 20vw;
+  height: auto;
+}
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+}
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vw auto;
+  width: 80vw;
+}
+
+.blob {
+  z-index: -1;
+  position: absolute;
+  left: -50px;
+  top: -10vw;
+  animation-name: blob;
+  animation-delay: 5s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes blob {
+  from {
+    scale: (0.75);
+  }
+  to {
+    scale: (1.5);
+  }
+}
+.titleText {
+  margin-top: 3vw;
+}
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform-origin: center;
+}
+.title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  width: 350px;
+}
+.circle {
+  width: 350px;
+  transform-origin: center;
+  cursor: pointer;
+}
+.circle:hover {
+  animation: hoverAnimation 0.15s normal both;
+}
+@keyframes hoverAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+.wrapper {
+  height: 100vh;
+  position: relative;
+  padding: 0px 100px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+  .blob {
+    width: 250px;
+    height: 250px;
+  }
+  .boxes {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+  .circle {
+    width: 300px;
+  }
+  .title {
+    font-size: 16px;
+    left: -20px;
+  }
+}
