@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from '../../app/styles/Menu.module.scss';
 const Menu = ({
   showMenu,
@@ -9,6 +9,7 @@ const Menu = ({
   scrollToAbout,
   scrollToWorks,
   scrollToSkills,
+  setShowMenu,
 }) => {
   const menuArr = ['aboutMeTitle', 'workTitle', 'skills'];
   const { t } = useTranslation();
@@ -36,7 +37,10 @@ const Menu = ({
             <li
               key={i}
               className={i < visibleItemCount ? styles.show : styles.visible}
-              onClick={() => handleRef(item)}
+              onClick={() => {
+                handleRef(item);
+                setShowMenu(false);
+              }}
             >
               {t(item)}
             </li>

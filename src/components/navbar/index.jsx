@@ -63,6 +63,7 @@ const Navbar = ({ scrollToAbout, scrollToWorks, scrollToSkills }) => {
         scrollToAbout={scrollToAbout}
         scrollToWorks={scrollToWorks}
         scrollToSkills={scrollToSkills}
+        setShowMenu={setShowMenu}
       />
     </nav>
   );

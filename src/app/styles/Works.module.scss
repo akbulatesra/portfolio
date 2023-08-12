@@ -107,10 +107,16 @@
     margin: 50px auto;
   }
   .circle {
-    width: 300px;
+    width: 270px;
   }
   .title {
-    font-size: 16px;
-    left: -20px;
+    font-size: 14px;
+    position: inherit;
+    margin-bottom: -100px;
+    width: max-content;
+  }
+  .box {
+    margin: 50px auto;
+    width: fit-content;
   }
 }

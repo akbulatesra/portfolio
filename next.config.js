@@ -3,6 +3,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  output: 'export',
 };
 
 module.exports = nextConfig;
+/**
+ * @type {import('next').NextConfig}
+ */
