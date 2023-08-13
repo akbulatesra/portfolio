@@ -42,22 +42,18 @@ const Skills = ({ skillsRef }) => {
   }, [visibleItemCount, showList]);
 
   return (
-    <main
-      className={styles.wrapper}
-      onClick={() => setShowList('')}
-      ref={skillsRef}
-    >
+    <main className={styles.wrapper} ref={skillsRef}>
       <h2 className={styles.title}>{t('skills')}</h2>
       <div className={styles.skills}>
         {skills.map((item, i) => (
           <div key={i}>
             <div
               className={styles.textWrapper}
-              onClick={(event) => {
-                event.stopPropagation();
+              onMouseEnter={() => {
                 setShowList(item);
                 setVisibleItemCount(0);
               }}
+              onMouseLeave={() => setShowList('')}
             >
               <h3 className={styles.text}>{item?.key}</h3>
             </div>
