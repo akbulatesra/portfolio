@@ -8,6 +8,7 @@ import About from '@/components/about';
 import Works from '@/components/works';
 import Skills from '@/components/skills';
 import { useRef } from 'react';
+import Social from '@/components/social';
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -28,8 +29,10 @@ export default function Home() {
       />
       <Main />
       <About aboutRef={aboutRef} />
+
       <Works worksRef={worksRef} />
       <Skills skillsRef={skillsRef} />
+      <Social />
     </main>
   );
 }

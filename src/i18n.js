@@ -20,6 +20,7 @@ const resources = {
       notes: 'Notes App',
       klinikya: 'Klinikya Web Application',
       skills: 'My Technical Competencies',
+      social: 'Social Accounts',
     },
   },
   tr: {

@@ -96,7 +96,6 @@
   .wrapper {
     padding: 20px;
     height: fit-content;
-    margin-bottom: 50px;
   }
   .blob {
     width: 250px;
@@ -104,7 +103,7 @@
   }
   .boxes {
     flex-direction: column;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
   }
   .circle {
     width: 270px;

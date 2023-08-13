@@ -5,6 +5,7 @@ import styles from '../../app/styles/Navbar.module.scss';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Menu from '../menu';
+import Link from 'next/link';
 
 const Navbar = ({ scrollToAbout, scrollToWorks, scrollToSkills }) => {
   const [lang, setLang] = useState('en');
@@ -34,7 +35,9 @@ const Navbar = ({ scrollToAbout, scrollToWorks, scrollToSkills }) => {
             {lang === 'en' ? 'TR' : 'EN'}
           </h4>
           <div className={styles.contact}>
-            <h4>{t('contact')}</h4>
+            <a href="mailto:a.esra.akbulat@gmail.com">
+              <h4>{t('contact')}</h4>
+            </a>
             <Image
               src="/icons/arrow-up-solid.svg"
               alt="arrow"
