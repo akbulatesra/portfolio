@@ -38,11 +38,13 @@ const Works = ({ worksRef }) => {
     'Font Awesome for different fonts',
   ];
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleItemCount((prevCount) => prevCount + 1);
-    }, 500);
+    if (visibleItemCount < list?.length) {
+      const interval = setInterval(() => {
+        setVisibleItemCount((prevCount) => prevCount + 1);
+      }, 500);
 
-    return () => clearInterval(interval);
+      return () => clearInterval(interval);
+    }
   }, [visibleItemCount, list]);
   console.log(visibleItemCount);
   return (
