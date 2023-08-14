@@ -8,12 +8,13 @@ import About from '@/components/about';
 import Works from '@/components/works';
 import Skills from '@/components/skills';
 import { useRef } from 'react';
-import Social from '@/components/social';
+import Contact from '@/components/contact';
 
 export default function Home() {
   const aboutRef = useRef(null);
   const worksRef = useRef(null);
   const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const scrollToRef = (ref) => {
     if (ref.current) {
@@ -26,13 +27,13 @@ export default function Home() {
         scrollToAbout={() => scrollToRef(aboutRef)}
         scrollToWorks={() => scrollToRef(worksRef)}
         scrollToSkills={() => scrollToRef(skillsRef)}
+        scrollToContact={() => scrollToRef(contactRef)}
       />
       <Main />
       <About aboutRef={aboutRef} />
-
       <Works worksRef={worksRef} />
       <Skills skillsRef={skillsRef} />
-      <Social />
+      <Contact contactRef={contactRef} />
     </main>
   );
 }

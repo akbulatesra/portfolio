@@ -21,6 +21,7 @@ const resources = {
       klinikya: 'Klinikya Web Application',
       skills: 'My Technical Competencies',
       social: 'Social Accounts',
+      contact: 'Contact Me!',
     },
   },
   tr: {
