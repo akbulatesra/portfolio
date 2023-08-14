@@ -68,10 +68,28 @@ h3 {
   }
   h4 {
     font-size: 16px;
-    list-style: 22px;
+    line-height: 22px;
   }
   h3 {
     font-size: 22px;
     line-height: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 70px;
+    line-height: 100px;
+  }
+  h2 {
+    font-size: 50px;
+    line-height: 90px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 22px;
   }
 }

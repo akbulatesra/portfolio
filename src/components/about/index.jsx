@@ -5,8 +5,10 @@ const About = ({ aboutRef }) => {
   return (
     <main className={styles.wrapper} ref={aboutRef}>
       <h2 className={styles.title}>{t('aboutMeTitle')}</h2>
-      <h4>{t('aboutMeText1')}</h4>
-      <h4>{t('aboutMeText2')}</h4>
+      <section className={styles.textWrapper}>
+        <h4>{t('aboutMeText1')}</h4>
+        <h4>{t('aboutMeText2')}</h4>
+      </section>
     </main>
   );
 };

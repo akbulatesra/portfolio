@@ -2,7 +2,12 @@
   margin-top: 3vw;
   width: fit-content;
 }
-
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1400px;
+}
 .title:after {
   content: '';
   display: block;
@@ -31,6 +36,9 @@
   gap: 20px;
   height: 100vh;
   padding: 0px 100px;
+  max-width: 1760px;
+  margin: 0 auto;
+  width: 100vw;
 }
 .footer {
   display: flex;
@@ -49,8 +57,21 @@
     width: 100vw;
     height: fit-content;
     margin-bottom: 50px;
+    max-width: 600px;
   }
   .title::after {
     margin: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 0 50px;
+    height: fit-content;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .wrapper {
+    padding: 0 80px;
   }
 }
