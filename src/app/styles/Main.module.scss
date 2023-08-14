@@ -4,6 +4,7 @@
   margin: 0 auto;
   height: 90vh;
   padding: 0px 100px;
+  width: 100vw;
 }
 .blob {
   margin-top: -500px;
@@ -12,6 +13,7 @@
 .title {
   z-index: 2;
   margin-top: 3vw;
+  max-width: 1250px;
 }
 .span {
   color: #f0c808;
@@ -37,7 +39,7 @@
   .wrapper {
     padding: 20px;
     width: 100vw;
-    height: 80vh;
+    max-width: 600px;
   }
   .blob {
     margin: -290px 0 0 20vw;
@@ -47,5 +49,21 @@
   }
   .title {
     margin-top: 100px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 0 50px;
+  }
+  .blob {
+    margin: -400px 0 0 35vw;
+  }
+  .title {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .wrapper {
+    padding: 0 80px;
   }
 }

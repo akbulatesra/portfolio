@@ -11,7 +11,7 @@ const Menu = ({
   scrollToSkills,
   setShowMenu,
 }) => {
-  const menuArr = ['aboutMeTitle', 'workTitle', 'skills', 'social'];
+  const menuArr = ['aboutMeTitle', 'workTitle', 'skills'];
   const { t } = useTranslation();
   const handleRef = (item) => {
     item === 'aboutMeTitle' && scrollToAbout();

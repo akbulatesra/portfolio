@@ -49,13 +49,14 @@
   box-shadow: 0px 4px 9px 5px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   width: 25vw;
-  max-width: 500px;
+  max-width: 350px;
   padding: 20px;
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   height: 10vw;
   pointer-events: auto;
+  max-height: 150px;
 }
 .textWrapper:hover {
   transform: scale(1.05);
@@ -64,6 +65,9 @@
   height: 100vh;
   padding: 0px 100px;
   // pointer-events: none;
+  max-width: 1760px;
+  margin: 0 auto;
+  width: 100vw;
 }
 .valueWrapper {
   margin: 20px 0 20px 50px;
@@ -87,6 +91,7 @@
   .wrapper {
     padding: 20px;
     height: fit-content;
+    max-width: 600px;
   }
   .skills {
     display: flex;
@@ -100,5 +105,25 @@
   }
   .valueWrapper {
     margin: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 0 50px;
+    height: fit-content;
+    margin-bottom: 100px;
+  }
+  .skills {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .wrapper {
+    padding: 0 80px;
+  }
+  .skills {
+    display: flex;
+    justify-content: space-around;
   }
 }

@@ -16,6 +16,7 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .wrapper {
     padding: 20px;
+    margin: 0;
   }
   .social {
     gap: 30px;
@@ -23,5 +24,15 @@
       width: 40px;
       height: 40px;
     }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .wrapper {
+    margin: 0;
   }
 }

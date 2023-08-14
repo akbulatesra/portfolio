@@ -2,6 +2,9 @@
   padding: 0 100px;
   height: 100vh;
   width: 100vw;
+  max-width: 1760px;
+  margin: 0 auto;
+  position: relative;
 }
 .label {
   display: flex;
@@ -47,4 +50,62 @@
 .wrapperInside {
   display: flex;
   align-items: center;
+}
+.toast {
+  position: absolute !important;
+  width: 300px;
+  height: 200px;
+  right: 0 !important;
+  left: auto !important;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+    max-width: 600px;
+    height: fit-content;
+  }
+  .form {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .wrapperInside {
+    flex-direction: column;
+  }
+  .label {
+    justify-content: space-around;
+    gap: 0;
+    h4 {
+      width: 80px;
+    }
+
+    input,
+    textarea {
+      width: 50vw;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 0 50px;
+    height: fit-content;
+    margin-bottom: 100px;
+  }
+  .wrapperInside {
+    flex-direction: column;
+  }
+  .form {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .wrapper {
+    padding: 0 80px;
+  }
+  .wrapperInside {
+    gap: 30px;
+  }
 }
