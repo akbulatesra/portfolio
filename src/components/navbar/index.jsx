@@ -7,7 +7,12 @@ import { useTranslation } from 'react-i18next';
 import Menu from '../menu';
 import Link from 'next/link';
 
-const Navbar = ({ scrollToAbout, scrollToWorks, scrollToSkills }) => {
+const Navbar = ({
+  scrollToAbout,
+  scrollToWorks,
+  scrollToSkills,
+  scrollToContact,
+}) => {
   const [lang, setLang] = useState('en');
   const { t } = useTranslation();
   const [showMenu, setShowMenu] = useState(false);
@@ -31,13 +36,11 @@ const Navbar = ({ scrollToAbout, scrollToWorks, scrollToSkills }) => {
           />
         </section>
         <section className={styles.wrapperRight}>
-          <h4 onClick={() => setLang(lang === 'en' ? 'tr' : 'en')}>
+          {/* <h4 onClick={() => setLang(lang === 'en' ? 'tr' : 'en')}>
             {lang === 'en' ? 'TR' : 'EN'}
-          </h4>
+          </h4> */}
           <div className={styles.contact}>
-            <a href="mailto:a.esra.akbulat@gmail.com">
-              <h4>{t('contact')}</h4>
-            </a>
+            <h4 onClick={scrollToContact}>{t('contact')}</h4>
             <Image
               src="/icons/arrow-up-solid.svg"
               alt="arrow"
