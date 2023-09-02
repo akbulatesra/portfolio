@@ -14,29 +14,31 @@ const Contact = ({ contactRef }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
-        form.current,
-        process.env.PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          toast('Your email has been sent successfully!');
-          setMyMail('');
-          setMyMessage('');
-          setMyName('');
-        },
-        (error) => {
-          toast(
-            'An error occurred while sending the email. Please try again later.'
+    mymail === '' || mymessage === '' || myname === ''
+      ? toast('Please fill in all fields')
+      : emailjs
+          .sendForm(
+            process.env.SERVICE_ID,
+            process.env.TEMPLATE_ID,
+            form.current,
+            process.env.PUBLIC_KEY
+          )
+          .then(
+            (result) => {
+              toast('Your email has been sent successfully!');
+              setMyMail('');
+              setMyMessage('');
+              setMyName('');
+            },
+            (error) => {
+              toast(
+                'An error occurred while sending the email. Please try again later.'
+              );
+              setMyMail('');
+              setMyMessage('');
+              setMyName('');
+            }
           );
-          setMyMail('');
-          setMyMessage('');
-          setMyName('');
-        }
-      );
   };
 
   return (
@@ -45,7 +47,7 @@ const Contact = ({ contactRef }) => {
       <Toaster
         containerClassName={styles.toast}
         toastOptions={{
-          duration: 8000,
+          duration: 5000,
           style: {
             background: '#363636',
             color: '#fff',
