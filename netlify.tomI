@@ -1,6 +1,16 @@
 [build]
   command = "npm run build"
-  publish = "out"  
+  publish = "out"
   environment = ["NETLIFY_NEXT_PLUGIN_SKIP=true"]
 
+[context.production.environment]
+  NEXT_PRIVATE_TARGET = "production"
 
+[context.deploy-preview.environment]
+  NEXT_PRIVATE_TARGET = "deploy-preview"
+
+[context.branch-deploy.environment]
+  NEXT_PRIVATE_TARGET = "development"
+
+[context.next.environment]
+  NEXT_PRIVATE_TARGET = "next"
