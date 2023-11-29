@@ -56,33 +56,35 @@ const Contact = ({ contactRef }) => {
       />
       <section className={styles.wrapperInside}>
         <form className={styles.form} onSubmit={handleSubmit} ref={form}>
-          <label className={styles.label}>
-            <h4>Name</h4>
-            <input
-              type="text"
-              name="name"
-              value={myname}
-              onChange={(e) => setMyName(e.target.value)}
-            />
-          </label>
-          <label className={styles.label}>
-            <h4>Email</h4>
-            <input
-              type="text"
-              name="email"
-              value={mymail}
-              onChange={(e) => setMyMail(e.target.value)}
-            />
-          </label>
-          <label className={styles.label}>
-            <h4>Your Message</h4>
-            <textarea
-              name="message"
-              value={mymessage}
-              onChange={(e) => setMyMessage(e.target.value)}
-            />
-          </label>
-          <button type="submit">Submit</button>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={myname}
+            onChange={(e) => setMyName(e.target.value)}
+            placeholder="Please Type Your Name"
+          />
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            value={mymail}
+            onChange={(e) => setMyMail(e.target.value)}
+            placeholder="Please Type Your Email"
+            id="email"
+          />
+          <label htmlFor="message">Your Message</label>
+          <textarea
+            name="message"
+            value={mymessage}
+            onChange={(e) => setMyMessage(e.target.value)}
+            placeholder="Please Type Your Message"
+            id="message"
+          />
+          <button type="submit" aria-label="Submit Form">
+            Submit
+          </button>
         </form>
         <Social />
       </section>

@@ -36,11 +36,8 @@ const Navbar = ({
           />
         </section>
         <section className={styles.wrapperRight}>
-          {/* <h4 onClick={() => setLang(lang === 'en' ? 'tr' : 'en')}>
-            {lang === 'en' ? 'TR' : 'EN'}
-          </h4> */}
           <div className={styles.contact}>
-            <h4 onClick={scrollToContact}>{t('contact')}</h4>
+            <p onClick={scrollToContact}>{t('contact')}</p>
             <Image
               src="/icons/arrow-up-solid.svg"
               alt="arrow"
@@ -51,6 +48,9 @@ const Navbar = ({
           <Image
             src="/icons/bars-solid.svg"
             alt="menu"
+            role="button"
+            tabIndex={0}
+            aria-label="Show Navbar Items"
             width={15}
             height={15}
             className={styles.menu}

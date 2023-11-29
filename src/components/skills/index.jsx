@@ -32,10 +32,16 @@ const Skills = ({ skillsRef }) => {
   const [visibleItemCount, setVisibleItemCount] = useState(0);
 
   useEffect(() => {
-    if (visibleItemCount < showList?.value?.length) {
+    if (visibleItemCount === 1) {
       const interval = setInterval(() => {
         setVisibleItemCount((prevCount) => prevCount + 1);
-      }, 500);
+      }, 10);
+
+      return () => clearInterval(interval);
+    } else if (visibleItemCount < showList?.value?.length) {
+      const interval = setInterval(() => {
+        setVisibleItemCount((prevCount) => prevCount + 1);
+      }, 400);
 
       return () => clearInterval(interval);
     }
@@ -62,7 +68,7 @@ const Skills = ({ skillsRef }) => {
                 showList?.value
                   ?.slice(0, visibleItemCount)
                   ?.map((el, number) => (
-                    <h4
+                    <p
                       key={number}
                       className={
                         number + 1 < visibleItemCount
@@ -71,7 +77,7 @@ const Skills = ({ skillsRef }) => {
                       }
                     >
                       {el}
-                    </h4>
+                    </p>
                   ))}
             </div>
           </div>

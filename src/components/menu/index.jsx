@@ -35,6 +35,9 @@ const Menu = ({
         <ul className={styles.list}>
           {menuArr.map((item, i) => (
             <li
+              role="button"
+              tabIndex={0}
+              aria-label="Navigate Selected Item"
               key={i}
               className={i < visibleItemCount ? styles.show : styles.visible}
               onClick={() => {
