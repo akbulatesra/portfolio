@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[context.production.environment]
+  NEXT_PRIVATE_TARGET = "production"
+
+[context.deploy-preview.environment]
+  NEXT_PRIVATE_TARGET = "deploy-preview"
+  
+  [context.development.environment]
+  NEXT_PRIVATE_TARGET = "development"
