@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"  
   environment = ["NEXT_PRIVATE_TARGET"]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
